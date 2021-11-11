@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>chooseOUIorDSAP()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Based on the LLC, decide to output the OUI or the DSAP<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function return the OUI/DSAP of the Packet
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def chooseOUIorDSAP(self):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">LLC = self.decodeLLC()</p>
+                    <p style="margin: 0%; text-indent: 3%;">EtherType = self.decodeEtherType()</p>
+                    <p style="margin: 0%; text-indent: 3%;">if LLC == "SNAP Protocol" and EtherType == "802.3 LLC":</p>
+                        <p style="margin: 0%; text-indent: 5%;">return str(self.getOUI())</p>
+                    <p style="margin: 0%; text-indent: 3%;">elif EtherType == "802.3 LLC":</p>
+                        <p style="margin: 0%; text-indent: 5%;">return str(self.getDSAP())</p>
+                    <p style="margin: 0%; text-indent: 3%;">else:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return "---"</p>
+            </div> 
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>getDSAP()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Get the required data from the Packet<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function return an error only failed to take the DSAP
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def getDSAP(self):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">try:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return self.packet_frame[14]</p>
+                    <p style="margin: 0%; text-indent: 3%;">except Exception:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return print("Error: Failed to take the DSAP\n")</p>
+            </div>    
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>checkMacAddress()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Gets the MAC Address and choose between Broadcast, Singlecast and Multicast (Local or Global)
+                <br></li>
+            <li><b>Return:</b><br>
+                >This function return if the Mac Address between Broadcast, Singlecast and Multicast
+                <br><br></li>
+            <li><b>Parameters:</b><br>
+                ><b>MAC</b>: MAC_D and MAC_M address<br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def checkMacAddress(self, MAC):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">MACByte = int(MAC[0], 16)</p>
+
+                    <p style="margin: 0%; text-indent: 3%;">if MACByte == 0xff:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return "Broadcast"</p>
+                    <p style="margin: 0%; text-indent: 3%;">elif MACByte % 2 == 0:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return "Singlecast"</p>
+                    <p style="margin: 0%; text-indent: 3%;">elif (MACByte >> 1) % 2 == 1:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return "Multicast Local"</p>
+                    <p style="margin: 0%; text-indent: 3%;">else:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return "Multicast Global"</p>
+            </div> 
+        </ul>
+
+    </body>
+</html>

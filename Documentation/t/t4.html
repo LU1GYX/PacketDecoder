@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>getMAC_M()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Gets the MAC address of the sender from the Packet<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function returns an error only if it fails to get the MAC_M (MAC address of the sender)
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def getMAC_M(self):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">try:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return self.packet_frame[6:12]</p>
+                    <p style="margin: 0%; text-indent: 3%;">except Exception:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return print("Error: Failed to take the MAC_M\n")</p>
+            </div>
+        </ul>
+    </body>
+</html>

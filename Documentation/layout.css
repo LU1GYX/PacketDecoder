@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(53, 47, 78);
+    font-family: Arial;
+}
+
+.title{
+    text-align: center;
+    background-color: grey;
+    border: solid black 3px;
+    font-size: 22px;
+}
+
+.documentation{
+    border: solid black 3px;
+    background-color: grey;
+    float: left;
+    width: 19%;
+    height: 300px;
+	min-width: 220px;
+}
+
+.funzioni{
+    border: solid black 3px;
+    background-color:  grey;
+    float: right;
+    width: 76%;
+    height: 600px;
+}
+
+.codeFrame{
+    border: solid black 2px;
+    background-color: rgb(61, 61, 61);
+    padding: 2%;
+}
+
+#listElement:hover {
+    color: purple;
+    cursor: pointer;
+}

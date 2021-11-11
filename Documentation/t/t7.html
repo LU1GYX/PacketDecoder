@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>getEther()</h1>
+    
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Get the required data from the Packet<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function return the converted EthLen<br>
+                >Error handler:<br>
+                <p style="margin: 0%; text-indent: 3%;">-When the conversion in 16 not possible<br></p>
+                <p style="margin: 0%; text-indent: 3%;">-When failed to take the Ethertype<br></p>
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def getEther(self):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">try:</p>
+                        <p style="margin: 0%; text-indent: 5%;">EthLen = "".join(self.packet_frame[12:14])</p>
+                    <p style="margin: 0%; text-indent: 5%;">try:</p>
+                        <p style="margin: 0%; text-indent: 8%;">return int(EthLen, 16)</p>
+                    <p style="margin: 0%; text-indent: 5%;">except Exception:</p>
+                        <p style="margin: 0%; text-indent: 8%;">return print("Error: Conversion in 16 not possible\n")</p>
+                    <p style="margin: 0%; text-indent: 3%;">except Exception:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return print("Error: Failed to take the Ethertype\n")</p>
+            </div> 
+        </ul>
+    </body>
+</html>

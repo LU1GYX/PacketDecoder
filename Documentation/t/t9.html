@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>decodeLLC()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Finds out the LLC Ethertype of the Packet
+                <br>>Use a Dictionary (Made by the person mentioned below)<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function return the corresponding value assigned in the Dictionary
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def decodeLLC(self):</b></p>
+                    <p  style="margin: 0%; text-indent: 3%;">EthType = self.decodeEtherType()</p>
+                    <p  style="margin: 0%; text-indent: 3%;">if EthType == "Ethernet 2":</p>
+                        <p  style="margin: 0%; text-indent: 5%;">return self.etherDictionare[self.getEther()]</p>
+                    <p  style="margin: 0%; text-indent: 3%;">else: </p>
+                        <p  style="margin: 0%; text-indent: 5%;">if int(self.getDSAP(), 16) == 0xaa:</p>
+                            <p  style="margin: 0%; text-indent: 8%;">return "SNAP Protocol"</p>
+                        <p  style="margin: 0%; text-indent: 5%;">else:</p>
+                            <p  style="margin: 0%; text-indent: 8%;">return "{0} Protocol".format(self.etherDictionare[self.getDSAP()])</p>
+            </div> 
+        </ul>
+    </body>
+</html>

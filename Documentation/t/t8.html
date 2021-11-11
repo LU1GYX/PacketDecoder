@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>decodeEtherType()</h1>
+        
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>Finds out if a Packet is Ethernet 2 or 802.3<br>
+            </li>
+            <li><b>Return:</b><br>
+                >This function return the corresponding value (Eth. 2/802.3))
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p  style="margin: 0%;"><b>def decodeEtherType(self):</b></p>
+                    <p  style="margin: 0%; text-indent: 3%;">EthLen = self.getEther()</p>
+                    <p  style="margin: 0%; text-indent: 3%;">if EthLen >= 0x5dc: #1500</p>
+                        <p  style="margin: 0%; text-indent: 5%;">return "Ethernet 2"</p>
+                    <p  style="margin: 0%; text-indent: 3%;">else: </p>
+                        <p  style="margin: 0%; text-indent: 5%;">return "802.3 LLC"</p>
+            </div> 
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="../layout.css">
+    </head>
+    <body style="background-color: grey;">
+        <h1>checkFrameLenght()</h1>
+
+        <ul  style="font-size: 20px;">
+            <li><b>Function:</b>
+                <br>>This function gets the length of the Ether
+                <br>
+            </li>
+            <li><b>Return:</b><br>
+                >If the dimension of the Ether is less than 0x5dc (1500) it returns the length of the Ether, if it's not less than 0x5dc, it returns the length from the bytes 16-17 of the packet frame 
+                <br><br>
+            </li>
+            <div class="codeFrame">
+                <p style="margin: 0%;"><b>def checkFrameLenght(self):</b></p>
+                    <p style="margin: 0%; text-indent: 3%;">EthLen = self.getEther()</p>
+                    <p style="margin: 0%; text-indent: 3%;">if EthLen < 0x5dc:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return EthLen</p>
+                    <p style="margin: 0%; text-indent: 3%;">else:</p>
+                        <p style="margin: 0%; text-indent: 5%;">return int("".join(self.packet_frame[16:18]), 16) + 14</p>
+            </div> 
+        </ul>
+    </body>
+</html>

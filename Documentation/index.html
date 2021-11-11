@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <head>
+        <title>Packet Decoder - Documentation</title>
+        <link rel="stylesheet" href="layout.css">
+    </head>
+    <body>
+        <div class="title">
+            <h1>Packet decoder documentation</h1>
+        </div><br>
+
+        <span class="documentation">
+            <h2 style="margin-left: 5%;">Funzioni:</h2>
+            <ul>
+                <li id="listElement" onclick="getPage('./t/t1.html')">readPacketFromFile()</li>
+                <li id="listElement" onclick="getPage('./t/t2.html')">readPacketFromText()</li>
+                <li id="listElement" onclick="getPage('./t/t3.html')">getMAC_D()</li>
+                <li id="listElement" onclick="getPage('./t/t4.html')">getMAC_M()</li>
+                <li id="listElement" onclick="getPage('./t/t5.html')">getDSAP()</li>
+                <li id="listElement" onclick="getPage('./t/t6.html')">getOUI()</li>
+                <li id="listElement" onclick="getPage('./t/t7.html')">getEther()</li>
+                <li id="listElement" onclick="getPage('./t/t8.html')">decodeEtherType()</li>
+                <li id="listElement" onclick="getPage('./t/t9.html')">decodeLLC()</li>
+                <li id="listElement" onclick="getPage('./t/t10.html')">chooseOUIorDSAP()</li>
+                <li id="listElement" onclick="getPage('./t/t11.html')">checkFrameLenght()</li>
+                <li id="listElement" onclick="getPage('./t/t12.html')">checkMacAddress()</li>
+            </ul>
+        </span>
+
+        <span class="funzioni" id="funzioni">
+            <iframe id="rightPage" style="border:0;" width="100%" height="100%"></iframe>
+        </span>
+    
+        <script>
+            function getPage(link) {
+                document.getElementById("rightPage").src = link;
+            }
+        </script>
+    </body>
+</html> 
